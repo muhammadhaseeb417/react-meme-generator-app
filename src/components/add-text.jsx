@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 function AddText({ x = 0, y = 0 }) {
+    const [editMode, setEditMode] = useState(false)
+    const [val, setVal] = useState("Double click to edit text")
     return (
         <motion.div
             drag
@@ -11,7 +14,11 @@ function AddText({ x = 0, y = 0 }) {
                 cursor: "move",
             }}
         >
-            <h2>Double click to edit text</h2>
+            {
+                editMode ? <input onDoubleClick={() => setEditMode(false)} type="text" value={val} onChange={(value) => setVal(value.target.value)} /> :
+                    <h2 onDoubleClick={() => setEditMode(true)}>{val}</h2>
+            }
+
         </motion.div>
     );
 }
