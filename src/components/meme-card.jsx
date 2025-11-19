@@ -7,7 +7,7 @@ function MemeCard(props) {
             <Card.Img variant="top" src={props.src} style={{ height: "200px" }} />
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary">Edit Meme</Button>
             </Card.Body>
         </Card>
     );

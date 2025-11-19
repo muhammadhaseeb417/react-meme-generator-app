@@ -11,14 +11,12 @@ function App() {
     getAllMemes().then(memes => setMemes(memes.data.memes))
   }, [])
 
-  console.log(memes)
-
   return (
-    <>
+    <div className="memes-grid">
       {
         memes.map(meme => <MemeCard key={meme.id} src={meme.url} title={meme.name} />)
       }
-    </>
+    </div>
   )
 }
 
