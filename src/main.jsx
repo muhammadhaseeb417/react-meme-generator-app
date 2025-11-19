@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/edit",
     element: <EditPage />
-  }
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
