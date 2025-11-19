@@ -12,9 +12,9 @@ function EditPage() {
     const { ref, isLoading, getJpeg } = useToImage()
 
     return (
-        <div >
+        <div>
             <h1>Edit Your Meme</h1>
-            <div ref={ref} style={{ width: "500px", border: "2px solid grey" }}>
+            <div ref={ref} style={{ width: "500px", border: "2px solid grey", backgroundColor: "white" }}>
                 <img src={imgURL} alt="meme" style={{ height: "400px" }} />
                 {
                     Array(count).fill(0).map((e, i) => <AddText key={i} />)
