@@ -13,7 +13,7 @@ function EditPage() {
                 <h1>Edit Your Meme</h1>
                 <img src={imgURL} alt="meme" style={{ height: "400px" }} />
                 {
-                    Array(count).fill(0).map(e => <AddText />)
+                    Array(count).fill(0).map((e, i) => <AddText key={i} />)
                 }
             </div>
             <button onClick={() => setCount(count + 1)}>Add Text</button>
